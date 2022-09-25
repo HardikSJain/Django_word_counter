@@ -1,0 +1,18 @@
+<h1>The amount of words in your text is <span style="color: red;">{{word_count}}</span></h1>
+
+<!-- button to display the words -->
+<button onclick="displayWords()">Display Words</button>
+<div id="display"></div>
+
+<script>
+    function displayWords() {
+        var x = document.getElementById("display");
+        var word = "{{words}}";
+        x.innerHTML = word;
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
